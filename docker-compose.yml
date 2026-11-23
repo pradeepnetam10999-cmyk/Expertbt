@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: binary_expert
+      POSTGRES_USER: binary_app
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me_locally}
+    ports: ["5432:5432"]
+    volumes: [binary_pgdata:/var/lib/postgresql/data]
+volumes:
+  binary_pgdata:
