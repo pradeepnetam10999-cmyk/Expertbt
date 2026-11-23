@@ -1,0 +1,2 @@
+# Security
+Provider keys are accepted by backend and stored in backend/.env. The .env file is gitignored. Local .env storage is not a secrets vault. Production needs encryption, access control, secret rotation and restricted filesystem permissions. Add authentication, authorization, rate limiting, HTTPS, strict CORS, dependency scanning and backups before public deployment. Never trust client-supplied prices for authoritative real-money settlement.
